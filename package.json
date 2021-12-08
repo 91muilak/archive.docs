@@ -1,8 +1,9 @@
 {
 	"scripts": {
-		"sass:compile": "sass src/sass/:assets/css --style compressed",
-		"sass:watch": "sass --watch src/sass/:assets/css",
-		"sass:watch-compressed": "sass --watch src/sass/:assets/css --style compressed",
+		"start": "run-p sass:watch 11ty:serve",
+		"sass:compile": "sass src/sass/:dist/assets/css --style compressed",
+		"sass:watch": "sass --watch src/sass/:dist/assets/css",
+		"sass:watch-compressed": "sass --watch src/sass/:dist/assets/css --style compressed",
 		"11ty:build": "npx @11ty/eleventy --config=.configs/.11ty.js",
 		"11ty:watch": "npx @11ty/eleventy --watch --config=.configs/.11ty.js",
 		"11ty:serve": "npx @11ty/eleventy --serve --config=.configs/.11ty.js",

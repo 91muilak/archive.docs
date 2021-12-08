@@ -27,7 +27,7 @@ module.exports = function(cnf) {
 
 		server: {
 			baseDir: [
-				'docs',
+				'./dist',
 			]
 		},
 		files: [
@@ -74,7 +74,7 @@ module.exports = function(cnf) {
 		dir: {
 
 			input: 'src',
-			output: 'docs',
+			output: 'dist',
 			includes: 'njk/includes/',
 			layouts: 'njk/layouts/',
 			data: "data"
