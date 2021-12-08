@@ -1,7 +1,7 @@
 {
 	"scripts": {
 		"start": "run-p sass:watch 11ty:serve",
-		"build": "npm-run-all editorconfig sass:compile 11ty:build",
+		"build": "npm-run-all sass:compile 11ty:build",
 		"sass:compile": "sass src/sass/:dist/assets/css --style compressed",
 		"sass:watch": "sass --watch src/sass/:dist/assets/css",
 		"sass:watch-compressed": "sass --watch src/sass/:dist/assets/css --style compressed",
