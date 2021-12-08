@@ -23,5 +23,13 @@
 			"#{$1}"
 		],
 		"description": "Комментарий"
+	},
+	"Кастомные переменные": {
+		"scope": "scss,sass,css",
+		"prefix": "var",
+		"body": [
+			"var(--$1)$2"
+		],
+		"description": "Переменная CSS"
 	}
 }

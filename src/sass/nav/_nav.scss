@@ -1,0 +1,53 @@
+.nav {
+
+	background: var(--nav_color-background);
+  color: var(--color-accent);
+	padding: .5em 0;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 1;
+
+
+	
+	@include transition(all .3s);
+
+	.title {
+
+		margin: 0;
+
+    @include opacity(0);
+    @include transition(opacity .5s);
+
+	}
+
+  .subtitle {
+
+    color: var(--color-font);
+
+    font: {
+      weight: normal;
+      size: $reset_font-size--sm;
+    }
+
+    @include opacity(.5);
+
+  }
+
+	@import 'container';
+	@import 'action';
+
+}
+
+.nav--shadow {
+
+  background: var(--nav_color-background--scrolled);
+
+  @include box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
+  
+  .title {
+    @include opacity(1);
+    @include transition(opacity .5s);
+  }
+
+}

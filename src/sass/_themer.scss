@@ -1,0 +1,9 @@
+@if $themes != null {
+	@each $theme-name, $map in $themes {
+		.theme-#{$theme-name} {
+			@each $key, $value in $map {
+				--#{$key}: #{$value};
+			}
+		}
+	}
+}

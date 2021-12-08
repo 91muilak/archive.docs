@@ -2,8 +2,8 @@
 
 const storageKey = "k19-theme";
 const themes = {
-	day: "day",
-	night: "night"
+	day: "theme-day",
+	night: "theme-night"
 }
 
 /* themerSet()

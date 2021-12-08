@@ -1,0 +1,48 @@
+.action {
+
+	$size: 38px;
+
+	width: $size;
+	height: $size;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	color: var(--color-accent);
+	background: transparent;
+	border: none;
+	cursor: pointer;
+
+	@include border-radius(50%);
+
+	&:hover,
+	&:focus {
+		background: var(--nav-action_color-background--hover);
+	}
+
+	&::before:hover {
+		display: block;
+		width: $size;
+		height: $size;
+		content: '';
+		position: absolute;
+		top: 0;
+	}
+
+	&:active {
+		background: var(--nav-action_color-background--active);
+	}
+
+	@include transition(all .3s ease);
+
+	&:first-child {
+		margin-left: -5px;
+	}
+
+	&:last-child {
+		margin-right: -5px;
+	}
+
+}
