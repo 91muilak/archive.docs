@@ -10,10 +10,15 @@
 	vertical-align: middle;
 	position: relative;
 	overflow: hidden;
-	color: var(--color-accent);
+	color: var(--color-font);
+	text-decoration: none;
 	background: transparent;
 	border: none;
 	cursor: pointer;
+
+	&_accent {
+		color: var(--color-accent);
+	}
 
 	@include border-radius(50%);
 
@@ -33,9 +38,13 @@
 
 	&:active {
 		background: var(--nav-action_color-background--active);
+		color: var(--color-accent);
 	}
 
-	@include transition(all .3s ease);
+	@include transition(
+		background .3s ease-in-out,
+		color .3s ease-in-out
+	);
 
 	&:first-child {
 		margin-left: -5px;

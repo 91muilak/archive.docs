@@ -9,6 +9,17 @@
   --header_color-background: #FBFBFB;
 }
 
+.theme-night {
+  --color-accent: #2D66A4;
+  --color-font: #F7F9F8;
+  --color-background: #050505;
+  --nav_color-background: #17181C;
+  --nav_color-background--scrolled: #17181C;
+  --nav-action_color-background--hover: rgba(45, 102, 164, 0.1);
+  --nav-action_color-background--active: rgba(45, 102, 164, 0.15);
+  --header_color-background: #17181C;
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -4262,24 +4273,15 @@ html {
 }
 .nav {
   background: var(--nav_color-background);
-  color: var(--color-accent);
   padding: 0.5em 0;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 1;
-  /* ? Transition Compiled: all 0.3s */
-  /* transition for o */
-  -o-transition: all 0.3s;
-  /* transition for moz */
-  -moz-transition: all 0.3s;
-  /* transition for webkit */
-  -webkit-transition: all 0.3s;
-  /* non prefixed transition */
-  transition: all 0.3s;
 }
 .nav .title {
   margin: 0;
+  color: inherit !important;
   /* ? Opacity Compiled: 0 */
   /* opacity for moz */
   -moz-opacity: 0;
@@ -4297,18 +4299,6 @@ html {
   /* non prefixed transition */
   transition: opacity 0.5s;
 }
-.nav .subtitle {
-  color: var(--color-font);
-  font-weight: normal;
-  font-size: 0.875rem;
-  /* ? Opacity Compiled: 0.5 */
-  /* opacity for moz */
-  -moz-opacity: 0.5;
-  /* non prefixed opacity */
-  opacity: 0.5;
-  /* for IE8 */
-  filter: alpha(opacity=50);
-}
 .nav__container {
   display: flex;
   justify-content: space-between;
@@ -4323,7 +4313,8 @@ html {
   vertical-align: middle;
   position: relative;
   overflow: hidden;
-  color: var(--color-accent);
+  color: var(--color-font);
+  text-decoration: none;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -4334,15 +4325,18 @@ html {
   -moz-border-radius: 50%;
   /* non prefixed border-radius */
   border-radius: 50%;
-  /* ? Transition Compiled: all 0.3s ease */
+  /* ? Transition Compiled: background 0.3s ease-in-out, color 0.3s ease-in-out */
   /* transition for o */
-  -o-transition: all 0.3s ease;
+  -o-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   /* transition for moz */
-  -moz-transition: all 0.3s ease;
+  -moz-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   /* transition for webkit */
-  -webkit-transition: all 0.3s ease;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   /* non prefixed transition */
-  transition: all 0.3s ease;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.nav__container .action_accent {
+  color: var(--color-accent);
 }
 .nav__container .action:hover, .nav__container .action:focus {
   background: var(--nav-action_color-background--hover);
@@ -4357,6 +4351,7 @@ html {
 }
 .nav__container .action:active {
   background: var(--nav-action_color-background--active);
+  color: var(--color-accent);
 }
 .nav__container .action:first-child {
   margin-left: -5px;
@@ -4373,7 +4368,8 @@ html {
   vertical-align: middle;
   position: relative;
   overflow: hidden;
-  color: var(--color-accent);
+  color: var(--color-font);
+  text-decoration: none;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -4384,15 +4380,18 @@ html {
   -moz-border-radius: 50%;
   /* non prefixed border-radius */
   border-radius: 50%;
-  /* ? Transition Compiled: all 0.3s ease */
+  /* ? Transition Compiled: background 0.3s ease-in-out, color 0.3s ease-in-out */
   /* transition for o */
-  -o-transition: all 0.3s ease;
+  -o-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   /* transition for moz */
-  -moz-transition: all 0.3s ease;
+  -moz-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   /* transition for webkit */
-  -webkit-transition: all 0.3s ease;
+  -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   /* non prefixed transition */
-  transition: all 0.3s ease;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.nav .action_accent {
+  color: var(--color-accent);
 }
 .nav .action:hover, .nav .action:focus {
   background: var(--nav-action_color-background--hover);
@@ -4407,6 +4406,7 @@ html {
 }
 .nav .action:active {
   background: var(--nav-action_color-background--active);
+  color: var(--color-accent);
 }
 .nav .action:first-child {
   margin-left: -5px;
@@ -4448,6 +4448,15 @@ html {
   background: var(--header_color-background);
   border-bottom: 1px solid rgba(0, 0, 0, 0.144);
 }
+.header__description {
+  /* ? Opacity Compiled: 0.9 */
+  /* opacity for moz */
+  -moz-opacity: 0.9;
+  /* non prefixed opacity */
+  opacity: 0.9;
+  /* for IE8 */
+  filter: alpha(opacity=90);
+}
 .header__org {
   display: flex;
   align-items: center;
@@ -4468,15 +4477,6 @@ html {
   text-decoration: none;
   color: inherit;
   margin-left: 10px;
-}
-.header__description {
-  /* ? Opacity Compiled: 0.9 */
-  /* opacity for moz */
-  -moz-opacity: 0.9;
-  /* non prefixed opacity */
-  opacity: 0.9;
-  /* for IE8 */
-  filter: alpha(opacity=90);
 }
 
 /*# sourceMappingURL=styles.css.map */

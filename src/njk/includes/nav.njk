@@ -1,21 +1,20 @@
 <nav class="nav">
 	<div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="nav__container">
-          <div style="display: flex; align-items: center">
-            <button class="action material-icons" title={{ "Назад" if nav.showBackAction else "На главную" }} onclick={{ "history.back()" if nav.showBackAction else "window.open('/')" }}>{{ "arrow_back" if nav.showBackAction else "home" }}</button>
-            <h5 class="title" style="margin-left: 14px">
-              {{ title }}
-              {% if subtitle %}
-                <br>
-                <small class="subtitle">{{ subtitle }}</small>
-              {% endif %}
-            </h5>
-          </div>
-          <button class="action material-icons" title="Сменить тему" onclick="themerToggle()">brightness_4</button>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div class="row">
+			<div class="col-12">
+				<div class="nav__container">
+					<div style="display: flex; align-items: center">
+						{% if nav.showBackAction %}
+							<button class="action material-icons" title="Назад" onclick="history.back()" style="margin-right: 14px">arrow_back</button>
+						{% endif %}
+						<h5 class="title">{{ title }}</h5>
+					</div>
+					<div style="display: flex; align-items: center">
+						<a class="action action_accent material-icons" href="/">home</a>&nbsp;
+						<button class="action action_accent material-icons" title="Сменить тему" onclick="themerToggle()">brightness_4</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>

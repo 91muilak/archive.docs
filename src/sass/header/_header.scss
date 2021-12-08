@@ -1,39 +1,39 @@
 .header {
 
-  background: var(--header_color-background);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+	background: var(--header_color-background);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.144);
 
-  &__org {
+	// &__title {
+		
+	// }
 
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+	&__description {
+		@include opacity(.9);
+	}
 
-    &__logo {
-      
-      $size: 30px;
+	&__org {
 
-      height: $size;
-      width: $size;
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
 
-      @include border-radius(6px);
+		&__logo {
+			
+			$size: 30px;
 
-    }
+			height: $size;
+			width: $size;
 
-    &__name {
-      text-decoration: none;
-      color: inherit;
-      margin-left: 10px;
-    }
+			@include border-radius(6px);
 
-  }
+		}
 
-  &__title {
-    
-  }
-
-  &__description {
-    @include opacity(.9);
-  }
+		&__name {
+			text-decoration: none;
+			color: inherit;
+			margin-left: 10px;
+		}
+		
+	}
 
 }
