@@ -27,7 +27,7 @@ function themerToggle() {
 	if (localStorage.getItem(storageKey) === themes.dark) {
 		themerSet(themes.light, "#ffffff");
 	} else {
-		themerSet(themes.dark, "#050505");
+		themerSet(themes.dark, "#17181C");
 	}
 }
 
@@ -35,7 +35,7 @@ function themerToggle() {
  * └── применяет тему из localStorage при загрузке страницы */
 function themerApply() {
 	if (localStorage.getItem(storageKey) === themes.dark) {
-		themerSet(themes.dark, "#050505");
+		themerSet(themes.dark, "#17181C");
 	} else {
 		themerSet(themes.light, "#fffff");
 	}
