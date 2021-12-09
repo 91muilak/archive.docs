@@ -42,6 +42,15 @@ function themerApply() {
 } themerApply();
 
 function setColorTheme(color) {
-	let scheme = document.querySelector('meta[name="theme-color"]');
-	scheme.setAttribute('content', color);
+
+	let themeColor = document.querySelector('meta[name="theme-color"]');
+	let msTitleColor = document.querySelector('meta[name="msapplication-TileColor"]');
+	let maskIcon = document.querySelector('link[rel="mask-icon"]');
+	let appleStatusBarStyle = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+
+	themeColor.setAttribute('content', color);
+	appleStatusBarStyle.setAttribute('content', color);
+	msTitleColor.setAttribute('content', color);
+	maskIcon.setAttribute('color', color);
+
 }

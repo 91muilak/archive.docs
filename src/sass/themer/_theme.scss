@@ -1,0 +1,42 @@
+$color_accent-day: #0365DA;
+$color_accent-night: #2D66A4;
+
+$themes: (
+
+	light: (
+
+		color-theme: #FFFFFF,
+		color-accent: $color_accent-day,
+		color-font: black,
+		color-background: #FFFFFF,
+
+		// * nav
+		nav_color-background: #FBFBFB,
+		nav_color-background--scrolled: white,
+		nav-action_color-background--hover: fade-out($color_accent-day, .9),
+		nav-action_color-background--active: fade-out($color_accent-day, .85),
+
+    // * header
+    header_color-background: #FBFBFB
+
+	),
+
+	dark: (
+
+		color-theme: #050505,
+		color-accent: $color_accent-night,
+		color-font: #F7F9F8,
+		color-background: #050505,
+
+		// * nav
+		nav_color-background: #17181C,
+		nav_color-background--scrolled: #17181C,
+		nav-action_color-background--hover: fade-out($color_accent-night, .9),
+		nav-action_color-background--active: fade-out($color_accent-night, .85),
+
+    // * header
+    header_color-background: #17181C
+
+	)
+
+);

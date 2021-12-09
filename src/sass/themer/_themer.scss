@@ -2,6 +2,8 @@
 	color-scheme: light dark;
 }
 
+@import 'theme';
+
 @if $themes != null {
 	@each $theme-name, $map in $themes {
 		:root[class="theme-#{$theme-name}"] {
