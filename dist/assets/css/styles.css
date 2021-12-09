@@ -1,4 +1,10 @@
-.theme-day {
+:root {
+  color-scheme: light dark;
+}
+
+:root[class=theme-light] {
+  color-scheme: light;
+  --color-theme: #FFFFFF;
   --color-accent: #0365DA;
   --color-font: black;
   --color-background: #FFFFFF;
@@ -9,7 +15,9 @@
   --header_color-background: #FBFBFB;
 }
 
-.theme-night {
+:root[class=theme-dark] {
+  color-scheme: dark;
+  --color-theme: #050505;
   --color-accent: #2D66A4;
   --color-font: #F7F9F8;
   --color-background: #050505;

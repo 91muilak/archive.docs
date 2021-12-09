@@ -1,6 +1,11 @@
+:root {
+	color-scheme: light dark;
+}
+
 @if $themes != null {
 	@each $theme-name, $map in $themes {
-		.theme-#{$theme-name} {
+		:root[class="theme-#{$theme-name}"] {
+			color-scheme: #{$theme-name};
 			@each $key, $value in $map {
 				--#{$key}: #{$value};
 			}

@@ -2,8 +2,8 @@
 
 const storageKey = "k19-theme";
 const themes = {
-	day: "theme-day",
-	night: "theme-night"
+	light: "theme-light",
+	dark: "theme-dark"
 }
 
 /* themerSet()
@@ -17,19 +17,19 @@ function themerSet(theme) {
 /* themerToggle()
  * └── переключает тему со светлой на темную и наоборот */
 function themerToggle() {
-	if (localStorage.getItem(storageKey) === themes.night) {
-		themerSet(themes.day);
+	if (localStorage.getItem(storageKey) === themes.dark) {
+		themerSet(themes.light);
 	} else {
-		themerSet(themes.night);
+		themerSet(themes.dark);
 	}
 }
 
 /* themerApply()
  * └── применяет тему из localStorage при загрузке страницы */
 function themerApply() {
-	if (localStorage.getItem(storageKey) === themes.night) {
-		themerSet(themes.night);
+	if (localStorage.getItem(storageKey) === themes.dark) {
+		themerSet(themes.dark);
 	} else {
-		themerSet(themes.day);
+		themerSet(themes.light);
 	}
 } themerApply();
