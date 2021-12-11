@@ -2,7 +2,6 @@
 
 const storageKey = "k19-theme";
 
-
 const themes = {
 	light: "theme-light",
 	dark: "theme-dark"
@@ -17,7 +16,7 @@ function themerSet(theme, color) {
 	if (color) {
 		setColorTheme(color);
 	} else {
-		setColorTheme("#ffffff")
+		setColorTheme("#ffffff");
 	}
 }
 

@@ -4,14 +4,16 @@
 			<div class="col-12">
 				<div class="nav__container">
 					<div style="display: flex; align-items: center">
-						{% if nav.showBackAction %}
+						{% if nav.showBackAction == true %}
 							<button class="action material-icons" title="Назад" onclick="history.back()" style="margin-right: 14px">arrow_back</button>
 						{% endif %}
 						<h5 class="title">{{ title }}</h5>
 					</div>
 					<div style="display: flex; align-items: center">
-						<a class="action action_accent material-icons" href="/">home</a>&nbsp;
-						<button class="action action_accent material-icons" title="Сменить тему" onclick="themerToggle()">brightness_4</button>
+						{% if nav.showHomeAction %}
+							<a class="action material-icons" href="/">home</a>&nbsp;
+						{% endif %}
+						<button class="action material-icons" title="Сменить тему" onclick="themerToggle()">brightness_4</button>
 					</div>
 				</div>
 			</div>

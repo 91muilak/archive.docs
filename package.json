@@ -9,7 +9,8 @@
 		"11ty:watch": "npx @11ty/eleventy --watch --config=.configs/.11ty.js",
 		"11ty:serve": "npx @11ty/eleventy --serve --config=.configs/.11ty.js",
 		"11ty:serve8081": "eleventy --serve --port=8081 --config=.configs/.11ty.js",
-		"editorconfig": "editorconfig-checker"
+		"editorconfig": "editorconfig-checker",
+		"submodules": "git submodule update --init"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.12.1",

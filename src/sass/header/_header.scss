@@ -17,7 +17,7 @@
 		align-items: center;
 		margin-top: 10px;
 
-		&__logo {
+		&-logo {
 			
 			$size: 30px;
 
@@ -28,7 +28,7 @@
 
 		}
 
-		&__name {
+		&-name {
 			text-decoration: none;
 			color: inherit;
 			margin-left: 10px;
