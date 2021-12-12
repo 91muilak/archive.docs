@@ -3,6 +3,10 @@
 	background: var(--card_color-background);
 	padding: 1.4em 1em 1.2em;
 	position: relative;
+	
+	@media (min-width: 768px) {
+		height: 150px;
+	}
 
 	@include box-shadow(
 		rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, 
@@ -26,12 +30,20 @@
 	&__subtitle {
 		margin-top: -0.4em;
 		order: 1;
+		font-size: $reset_font-size--sm;
 		@include opacity(.4);
 	}
 
 	&__description {
+
 		margin-bottom: 0;
+		display: -webkit-box;
+		overflow: hidden;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+
 		@include opacity(.8);
+
 	}
 
 	&__link::before {
