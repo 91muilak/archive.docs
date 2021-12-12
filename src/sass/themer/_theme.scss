@@ -1,5 +1,4 @@
-$color_accent-day: #1f6878;
-$color_accent-night: #278aa0;
+@import 'accent';
 
 $themes: (
 
@@ -17,7 +16,12 @@ $themes: (
 		nav-action_color-background--active: fade-out($color_accent-day, .85),
 
     // * header
-    header_color-background: #FBFBFB
+    header_color-background: #FBFBFB,
+
+		// * card
+		card_color-background: #FBFBFB,
+		card_color-background--hover: fade-out($color_accent-day, .9),
+		card_color-background--active: fade-out($color_accent-day, .7)
 
 	),
 
@@ -35,7 +39,12 @@ $themes: (
 		nav-action_color-background--active: fade-out($color_accent-night, .85),
 
     // * header
-    header_color-background: #17181C
+    header_color-background: #17181C,
+
+		// * card
+		card_color-background: #17181C,
+		card_color-background--hover: fade-out($color_accent-night, .6),
+		card_color-background--active: fade-out($color_accent-night, .8)
 
 	)
 

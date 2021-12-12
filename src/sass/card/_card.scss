@@ -1,0 +1,61 @@
+.card {
+
+	background: var(--card_color-background);
+	padding: 1.4em 1em 1.2em;
+	position: relative;
+
+	@include box-shadow(
+		rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, 
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px
+	);
+
+	@include border-radius($border-radius);
+	@include transition(all .3s);
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		margin-top: 0;
+		color: var(--color-accent);
+	}
+
+	&__subtitle {
+		margin-top: -0.4em;
+		order: 1;
+		@include opacity(.4);
+	}
+
+	&__description {
+		margin-bottom: 0;
+		@include opacity(.8);
+	}
+
+	&__link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+
+		&:focus {
+			outline: 2px solid red;
+			background: rgba(0, 0, 0, 0.568);
+		}
+
+	}
+
+	&:hover {
+		background: var(--card_color-background--hover);
+	}	
+	
+	&:active {
+		background: var(--card_color-background--active);
+	}
+	
+}

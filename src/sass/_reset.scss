@@ -50,6 +50,23 @@ body {
 
 }
 
+ul, ol {
+	padding-left: 18px;
+}
+
+a {
+
+	color: var(--color-accent);
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: underline;
+	}
+
+}
+
 blockquote {
 	margin-left: 0;
 	padding-left: 10px;
@@ -140,7 +157,7 @@ button:disabled {
 }
 
 legend {
-	box-sizing: border-box;
+	@include box-sizing();
 	color: inherit;
 	display: table;
 	max-width: 100%;
@@ -150,7 +167,7 @@ legend {
 
 [type="checkbox"],
 [type="radio"] {
-	box-sizing: border-box;
+	@include box-sizing();
 	padding: 0;
 }
 
@@ -190,7 +207,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 
 }
-
 
 h1 { font-size: $reset_font-size--h1; }
 h2 { font-size: $reset_font-size--h2; }
