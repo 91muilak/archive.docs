@@ -13,7 +13,7 @@
 		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px
 	);
 
-	@include border-radius($border-radius);
+	@include border-radius();
 	@include transition(all .3s);
 
 	header {

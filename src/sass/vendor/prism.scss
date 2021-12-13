@@ -1,4 +1,4 @@
-@import '../kalium19/kalium19';
+@import '../../../node_modules/@rx1310/kalium19/kalium19';
 @import '../themer/accent';
 @import '../variables';
 
@@ -29,7 +29,7 @@ pre[class*="language-"] {
 		text
 	);
 
-	@include border-radius($border-radius);
+	@include border-radius();
 
 }
 
