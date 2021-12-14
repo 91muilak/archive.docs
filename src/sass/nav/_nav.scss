@@ -20,6 +20,12 @@
 	@import 'container';
 	@import 'action';
 
+
+	@include transition(
+		background .5s, 
+		box-shadow .4s
+	);
+
 }
 
 .nav--shadow {
