@@ -10,11 +10,6 @@
     cursor: pointer;
 		position: relative;
 
-		@include transition(
-			background .3s ease-in-out,
-			color .3s ease-in-out
-		);
-
 		&:hover,
 		&:focus,
 		a:focus-visible::before  {

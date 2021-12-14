@@ -3,23 +3,24 @@ table {
   color: inherit;
   border-spacing: 0;
   width: 100%;
-	border: 2px solid var(--color-divider);
-	background: var(--table_color-background);
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  border: 1px solid transparent;
+
+  @media (max-width: 575.98px) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 	
 	&::-webkit-scrollbar-thumb {
 	
 		background-color: var(--color-font);
-		border: 3px solid var(--table_color-background);
 		@include border-radius();
 	
 	}
 	
 	@include border-radius();
-  
+
   th,
   td {
     padding: 0.75em;
@@ -37,13 +38,13 @@ table {
 
 	thead th,
 	tbody td {
-		padding: .6em .8em;
+		padding: .6em 0;
 	}
 
 	tbody tr:hover,
 	tbody tr:active,
 	tbody tr:focus {
-		background: var(--table-tr_color-background--hover);
+		background: var(--table_color-background--hover);
 	}
 
 }

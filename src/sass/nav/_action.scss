@@ -41,11 +41,6 @@
 		color: var(--color-accent);
 	}
 
-	@include transition(
-		background .3s ease-in-out,
-		color .3s ease-in-out
-	);
-
 	&:first-child {
 		margin-left: -10px;
 	}
