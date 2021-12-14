@@ -26,9 +26,11 @@ $themes: (
 
 		// * list
 		list-item_color-background--hover: fade-out($color_accent-day, .9),
-		list-item_color-background--active: fade-out($color_accent-day, .85)
-		
+		list-item_color-background--active: fade-out($color_accent-day, .85),
 
+		// * table
+		table_color-background: #f8f8f8,
+		table-tr_color-background--hover: #f0f0f0
 	),
 
 	dark: (
@@ -54,8 +56,12 @@ $themes: (
 
 		// * list
 		list-item_color-background--hover: fade-out($color_accent-night, .9),
-		list-item_color-background--active: fade-out($color_accent-night, .85)
-		
+		list-item_color-background--active: fade-out($color_accent-night, .85),
+
+		// * table
+		table_color-background: #0d0d0f,
+		table-tr_color-background--hover: #17181C
+
 	)
 
 );
