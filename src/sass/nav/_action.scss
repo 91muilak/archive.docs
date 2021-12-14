@@ -21,6 +21,10 @@
 	}
 
 	@include border-radius(50%);
+	@include transition(
+		color .3s,
+		background .3s
+	);
 
 	&:hover,
 	&:focus {
