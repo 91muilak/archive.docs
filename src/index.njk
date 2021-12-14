@@ -13,24 +13,55 @@
 		<main>
 			<div class="container">
 				<div class="row">
-					<div class="col-12">
-						<center>
-							<h3>Миксины</h3>
-						</center>
-						<br>
-					</div>
-					{% for id, obj in mixins %}
-						<div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
-							<div class="card">
-								<header>
-									<span class="card__subtitle">@mixins</span>
-									<h4 class="card__title">{{ obj.name }}</h4>
-								</header>
-								<p class="card__description">{{ obj.desc }}</p>
-								<a class="card__link" href="docs/{{ id }}" tabindex="0"></a>
+
+					<div class="col-6 mb-4 col-md-3 col-lg-2">
+						<div class="card">
+							<header class="card-header">
+								<h5>Миксины</h5>
+							</header>
+							<div class="card-body">
+								<p>Миксины позволяют генерировать шаблонный код любой величины, избавляя разработчика от самостоятельного прописывания этого кода.</p>
 							</div>
+							<hr>
+							<ul class="list rounded-bottom">
+								{% for id, obj in mixins %}
+									<li class="list-item">
+										<b>{{ obj.name }}</b>
+										<small>{{ obj.desc }}</small>
+										<a href="docs/mixin/{{ id }}"></a>
+									</li>
+								{% endfor %}
+							</ul>
 						</div>
-					{% endfor %}
+						
+					</div>
+
+					<div class="col-6 mb-4 col-md-3 col-lg-2">
+
+						<div class="card">
+							<header class="card-header">
+								<h5>Утилиты</h5>
+							</header>
+							<div class="card-body">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
+							</div>
+							<hr>
+							<ul class="list">
+								{% for id, obj in utils %}
+									<li class="list-item">
+										<b>{{ obj.name }}</b>
+										<small>{{ obj.desc }}</small>
+										<a href="docs/util/{{ id }}"></a>
+									</li>
+								{% endfor %}
+							</ul>
+							<footer class="card-footer">
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+							</footer>
+						</div>
+
+					</div>
+					
 				</div>
 			</div>
 		</main>

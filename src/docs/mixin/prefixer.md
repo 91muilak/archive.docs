@@ -1,12 +1,8 @@
 ---
-layout: doc.njk
 title: "Миксин Prefixer"
 header: {
 	"title": "Prefixer",
 	"description":"Миксин, позволяющий избавиться от дубляжа одинаковых свойств с браузерными префиксами в стилях."
-}
-nav: {
-	"showHomeAction": false
 }
 ---
 

@@ -1,77 +1,17 @@
 .card {
 
-	background: var(--card_color-background);
-	padding: 1.4em 1em 1.2em;
-	position: relative;
-	
-	@media (min-width: 768px) {
-		height: 140px;
-	}
+	background-color: var(--card_color-background);
 
-	@include box-shadow(
-		rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, 
-		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px
-	);
-
+	@include box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
 	@include border-radius();
-	@include transition(all .3s);
 
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 0;
+		padding: 0;
 	}
 
-	&__title {
-		margin-top: 0;
-		color: var(--color-accent);
-	}
+	@import 'header';
+	@import 'body';
+	@import 'footer';
 
-	&__subtitle {
-
-		margin-top: -0.4em;
-		order: 1;
-		font-size: $reset_font-size--sm;
-
-		@include opacity(.4);
-
-	}
-
-	&__description {
-
-		margin-bottom: 0;
-		margin-top: 4px;
-		display: -webkit-box;
-		overflow: hidden;
-		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
-
-		@include opacity(.8);
-
-	}
-
-	&__link::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-
-		&:focus {
-			outline: 2px solid red;
-			background: rgba(0, 0, 0, 0.568);
-		}
-
-	}
-
-	&:hover {
-		background: var(--card_color-background--hover);
-	}	
-	
-	&:active {
-		background: var(--card_color-background--active);
-	}
-	
 }
