@@ -16,7 +16,8 @@
 		);
 
 		&:hover,
-		&:focus  {
+		&:focus,
+		a:focus-visible::before  {
 			background: var(--list-item_color-background--hover);
 		}
 

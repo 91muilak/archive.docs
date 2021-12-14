@@ -14,53 +14,57 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="col-6 mb-4 col-md-3 col-lg-2">
-						<div class="card">
-							<header class="card-header">
-								<h5 class="mi"><span class="material-icons">folder</span>Миксины</h5>
-							</header>
-							<div class="card-body">
-								<p>Миксины позволяют генерировать шаблонный код любой величины, избавляя разработчика от самостоятельного прописывания этого кода.</p>
+					{% if mixins %}
+						<div class="col-6 mb-4 col-md-3 col-lg-2">
+							<div class="card">
+								<header class="card-header">
+									<h5 class="mi"><span class="material-icons">folder</span>Миксины</h5>
+								</header>
+								<div class="card-body">
+									<p>Миксины позволяют генерировать шаблонный код любой величины, избавляя разработчика от самостоятельного прописывания этого кода.</p>
+								</div>
+								<hr>
+								<ul class="list rounded-bottom">
+									{% for id, obj in mixins %}
+										<li class="list-item">
+											<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
+											<small>{{ obj.desc }}</small>
+											<a href="docs/mixin/{{ id }}" aria-label="Миксин {{ obj.name }}"></a>
+										</li>
+									{% endfor %}
+								</ul>
 							</div>
-							<hr>
-							<ul class="list rounded-bottom">
-								{% for id, obj in mixins %}
-									<li class="list-item">
-										<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
-										<small>{{ obj.desc }}</small>
-										<a href="docs/mixin/{{ id }}"></a>
-									</li>
-								{% endfor %}
-							</ul>
+							
 						</div>
-						
-					</div>
+					{% endif %}
 
-					<div class="col-6 mb-4 col-md-3 col-lg-2">
+					{% if utils %}
+						<div class="col-6 mb-4 col-md-3 col-lg-2">
 
-						<div class="card">
-							<header class="card-header">
-								<h5 class="mi"><span class="material-icons">folder</span>Утилиты</h5>
-							</header>
-							<div class="card-body">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
+							<div class="card">
+								<header class="card-header">
+									<h5 class="mi"><span class="material-icons">folder</span>Утилиты</h5>
+								</header>
+								<div class="card-body">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
+								</div>
+								<hr>
+								<ul class="list">
+									{% for id, obj in utils %}
+										<li class="list-item">
+											<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
+											<small>{{ obj.desc }}</small>
+											<a href="docs/util/{{ id }}"></a>
+										</li>
+									{% endfor %}
+								</ul>
+								<footer class="card-footer">
+									<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+								</footer>
 							</div>
-							<hr>
-							<ul class="list">
-								{% for id, obj in utils %}
-									<li class="list-item">
-										<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
-										<small>{{ obj.desc }}</small>
-										<a href="docs/util/{{ id }}"></a>
-									</li>
-								{% endfor %}
-							</ul>
-							<footer class="card-footer">
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-							</footer>
-						</div>
 
-					</div>
+						</div>
+					{% endif %}
 
 				</div>
 			</div>

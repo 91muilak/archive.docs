@@ -7,7 +7,7 @@ header: {
 ---
 
 > *Миксин **{{header.title}}** был написан Kitty Giraudel и был выложен на сайте [CSS Tricks](https://css-tricks.com/snippets/sass/mixin-prefix-properties/#simple-version), а позже был доработан мною.*
-# О миксине
+## О миксине
 Миксин {{header.title}} позволяет избавиться от дубляжа одинаковых свойств с браузерными префиксами в стилях.
 
 Существует 3 варианта данного миксина:
