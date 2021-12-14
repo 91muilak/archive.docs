@@ -12,13 +12,13 @@
 
 }
 
-* {
-	@include transition(
-		background .5s, 
-		box-shadow .4s,
-		color .07s
-	);
-}
+// * {
+// 	@include transition(
+// 		background .5s, 
+// 		box-shadow .4s,
+// 		color .07s
+// 	);
+// }
 
 *:focus-visible {
 	outline: 1px solid var(--color-accent);
