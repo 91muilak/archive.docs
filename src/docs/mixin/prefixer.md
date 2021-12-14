@@ -2,30 +2,33 @@
 title: "Миксин Prefixer"
 header: {
 	"title": "Prefixer",
-	"description":"Миксин, позволяющий избавиться от дубляжа одинаковых свойств с браузерными префиксами в стилях."
+	"description":"Для веб-разработчиков существует большое количество утилит, которые позволяют забыть о необходимости устанавливать браузерные префиксы для CSS-свойств. Данный миксин не добавляет автоматически префиксы, но позволяет облегчить написание стилей с префиксами."
 }
 ---
 
-> *Миксин **{{header.title}}** был написан Kitty Giraudel и был выложен на сайте [CSS Tricks](https://css-tricks.com/snippets/sass/mixin-prefix-properties/#simple-version), а позже был доработан мною.*
-## О миксине
-Миксин {{header.title}} позволяет избавиться от дубляжа одинаковых свойств с браузерными префиксами в стилях.
-
-Существует 3 варианта данного миксина:
-
-- [Prefixer](#prefixer)
-- [Prefixer Ext](#prefixer-ext)
-- [Prefixer Old](#prefixer-old)
-
-## Prefixer {#prefixer}
-Синтаксис очень прост. Необходимо указать первым `свойство`, затем `значение` и уже список префиксов, которые необходимо добавить к свойству.
+Для начала разберемся что входит в Prefixer. Существует три основных варианта миксина:
+1. обычный
+2. пакетный
+3. старый
+## Обычный
+Обычный Prefixer может принимать только одно свойство и его значение:
 ```scss
 prefixer(
-	prop,
-	value,
-	prefixes
+	$prop,
+	$value,
+	$prefixes(),
+	$withNonPrefixedDeclaration?
 )
 ```
+
+| Данные | Значение |
+|-|-|
+| `$prop` 			| CSS-свойство, которое необходимо префиксить |
+| `$value` 			| значение CSS-свойства |
+| `$prefixes()` | список префиксов |
+| `$withNonPrefixedDeclaration?` | настройка, которая определяет будет ли добавлено свойство без префикса | 
 ### Пример
+Добавим префиксы к свойству `border-radius`:
 ```scss
 // styles.scss
 .block {
@@ -44,63 +47,16 @@ prefixer(
   border-radius        : 15px;
 }
 ```
-
-## Prefixer Ext {#prefixer-ext}
-Синтаксис также прост. Тут уже можно указать целый список свойств, к которым должны добавиться префиксы.
-```scss
-prefixer-ext(
-	(
-		prop: value,
-		prop: value
-	),
-	prefixes
-)
-```
-### Пример
-```scss
+Наверное заметили, что `$withNonPrefixedDeclaration` не использовался? Он по дефолту имеет значение `true`. Чтобы скомпилировать свойство без префикса нужно уазать `false`:
+```scss/6
 // styles.scss
 .block {
-	@include prefixer-ext(
-		(
-			column-count: 3,
-			column-gap: 1.5em,
-			column-rule: 2px solid hotpink
-		),
-		moz webkit
-	);
-}
-```
-```css
-/* styles.css */
-.block {
-  -moz-column-count   : 3;
-  -webkit-column-count: 3;
-  column-count        : 3;
-  -moz-column-gap     : 1.5em;
-  -webkit-column-gap  : 1.5em;
-  column-gap          : 1.5em;
-  -moz-column-rule    : 2px solid hotpink;
-  -webkit-column-rule : 2px solid hotpink;
-  column-rule         : 2px solid hotpink;
-}
-```
-
-## Prefixer Old {#prefixer-old}
-Старая версия миксина, которая требует лишь `свойство` и `значение`, а на выходе добавляет все известные префиксы.
-```scss
-prefixer(
-	prop,
-	value
-)
-```
-### Пример
-```scss
-// styles.scss
-.block {
-	@include prefixer-old(
+	@include prefixer(
 		border-radius,
-		15px
-	);
+		15px,
+		webkit moz,
+		false
+	)
 }
 ```
 ```css
@@ -108,8 +64,5 @@ prefixer(
 .block {
   -webkit-border-radius: 15px;
   -moz-border-radius   : 15px;
-  -ms-border-radius    : 15px;
-  -o-border-radius     : 15px;
-  border-radius        : 15px;
 }
 ```
