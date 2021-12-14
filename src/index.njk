@@ -17,7 +17,7 @@
 					<div class="col-6 mb-4 col-md-3 col-lg-2">
 						<div class="card">
 							<header class="card-header">
-								<h5>Миксины</h5>
+								<h5 class="mi"><span class="material-icons">folder</span>Миксины</h5>
 							</header>
 							<div class="card-body">
 								<p>Миксины позволяют генерировать шаблонный код любой величины, избавляя разработчика от самостоятельного прописывания этого кода.</p>
@@ -26,7 +26,7 @@
 							<ul class="list rounded-bottom">
 								{% for id, obj in mixins %}
 									<li class="list-item">
-										<b>{{ obj.name }}</b>
+										<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
 										<small>{{ obj.desc }}</small>
 										<a href="docs/mixin/{{ id }}"></a>
 									</li>
@@ -40,7 +40,7 @@
 
 						<div class="card">
 							<header class="card-header">
-								<h5>Утилиты</h5>
+								<h5 class="mi"><span class="material-icons">folder</span>Утилиты</h5>
 							</header>
 							<div class="card-body">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
@@ -49,7 +49,7 @@
 							<ul class="list">
 								{% for id, obj in utils %}
 									<li class="list-item">
-										<b>{{ obj.name }}</b>
+										<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
 										<small>{{ obj.desc }}</small>
 										<a href="docs/util/{{ id }}"></a>
 									</li>
@@ -61,7 +61,7 @@
 						</div>
 
 					</div>
-					
+
 				</div>
 			</div>
 		</main>
