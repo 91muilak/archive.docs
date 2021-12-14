@@ -13,10 +13,19 @@
 		<main>
 			<div class="container">
 				<div class="row">
+					<div class="col-12">
+						<center>
+							<h3>Миксины</h3>
+						</center>
+						<br>
+					</div>
 					{% for id, obj in mixins %}
 						<div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
 							<div class="card">
-								<h4 class="card__title">{{ obj.name }}</h4>
+								<header>
+									<span class="card__subtitle">@mixins</span>
+									<h4 class="card__title">{{ obj.name }}</h4>
+								</header>
 								<p class="card__description">{{ obj.desc }}</p>
 								<a class="card__link" href="docs/{{ id }}" tabindex="0"></a>
 							</div>

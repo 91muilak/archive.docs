@@ -4,7 +4,7 @@
 			<div class="col-12">
 				<div class="nav__container">
 					<div style="display: flex; align-items: center">
-						{% if nav.showBackAction == true %}
+						{% if nav.showBackAction != false %}
 							<button class="action material-icons" title="Назад" onclick="history.back()" style="margin-right: 14px">arrow_back</button>
 						{% endif %}
 						<h5 class="title">{{ title }}</h5>

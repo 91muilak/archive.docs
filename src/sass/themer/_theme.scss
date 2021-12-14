@@ -11,7 +11,7 @@ $themes: (
 
 		// * nav
 		nav_color-background: #FBFBFB,
-		nav_color-background--scrolled: white,
+		nav_color-background--scrolled: rgba(255, 255, 255, 0.979),
 		nav-action_color-background--hover: fade-out($color_accent-day, .9),
 		nav-action_color-background--active: fade-out($color_accent-day, .85),
 
@@ -34,7 +34,7 @@ $themes: (
 
 		// * nav
 		nav_color-background: #17181C,
-		nav_color-background--scrolled: #17181C,
+		nav_color-background--scrolled: #17181ced,
 		nav-action_color-background--hover: fade-out($color_accent-night, .9),
 		nav-action_color-background--active: fade-out($color_accent-night, .85),
 
