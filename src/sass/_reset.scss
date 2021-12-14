@@ -8,11 +8,6 @@
 *::before,
 *::after {
 
-	@include transition(
-		color .04s,
-		background .1s
-	);
-
 	-webkit-touch-callout: none; // https://clck.ru/9HHvq
 
 }

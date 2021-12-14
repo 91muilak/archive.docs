@@ -60,16 +60,16 @@ module.exports = function(cnf) {
 
 		}
 
-		}).use(mdAttrs, {
-			// optional, these are default options
-			leftDelimiter: '{',
-			rightDelimiter: '}',
-			allowedAttributes: []  // empty array = all attributes are allowed
-		});
+	}).use(mdAttrs, {
+		// optional, these are default options
+		leftDelimiter: '{',
+		rightDelimiter: '}',
+		allowedAttributes: []  // empty array = all attributes are allowed
+	});
 
-		cnf.setLibrary('md', markdownLibrary);
+	cnf.setLibrary('md', markdownLibrary);
 
-		return {
+	return {
 
 		dir: {
 
