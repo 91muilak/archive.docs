@@ -143,7 +143,7 @@ img {
 	vertical-align: middle;
 	object-fit: scale-down;
 
-	@include border-radius($border-radius_image);
+	@include border-radius(8px);
 
 }
 
