@@ -26,15 +26,6 @@
 			background: var(--list-item_color-background--active);
 		}
 
-    small {
-
-			display: block;
-      margin-top: .4em;
-      
-			@include opacity(.7);
-
-    }
-
 		a::before {
 			content: '';
 			width: 100%;

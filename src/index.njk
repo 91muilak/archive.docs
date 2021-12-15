@@ -14,8 +14,8 @@
 			<div class="container">
 				<div class="row">
 
-					{% if mixins %}
-						<div class="col-6 mb-4">
+					{% if kalium19.mixins %}
+						<div class="col-6 mb-4 col-md-6">
 							<div class="card">
 								<header class="card-header">
 									<h5 class="mi"><span class="material-icons">folder</span>Миксины</h5>
@@ -25,11 +25,10 @@
 								</div>
 								<hr>
 								<ul class="list">
-									{% for id, obj in mixins %}
+									{% for obj in kalium19.mixins %}
 										<li class="list-item">
-											<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
-											<small>{{ obj.desc }}</small>
-											<a href="docs/mixin/{{ id }}" aria-label="Миксин {{ obj.name }}"></a>
+											<b class="mi"><span class="material-icons">article</span> {{ obj }}</b>
+											<a href="docs/mixin/{{ obj }}" aria-label="Миксин {{ obj }}"></a>
 										</li>
 									{% endfor %}
 								</ul>
@@ -41,8 +40,8 @@
 						</div>
 					{% endif %}
 
-					{% if utils %}
-						<div class="col-6 mb-4 col-md-3 col-lg-2">
+					{% if kalium19.utils %}
+						<div class="col-6 mb-4 col-md-3">
 
 							<div class="card">
 								<header class="card-header">
@@ -53,17 +52,40 @@
 								</div>
 								<hr>
 								<ul class="list">
-									{% for id, obj in utils %}
+									{% for obj in kalium19.utils %}
 										<li class="list-item">
-											<b class="mi"><span class="material-icons">article</span> {{ obj.name }}</b>
-											<small>{{ obj.desc }}</small>
-											<a href="docs/util/{{ id }}"></a>
+											<b class="mi"><span class="material-icons">article</span> {{ obj }}</b>
+											<a href="docs/util/{{ obj }}" aria-label="Утилита {{ obj }}"></a>
 										</li>
 									{% endfor %}
 								</ul>
 								<footer class="card-footer">
 									<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
 								</footer>
+							</div>
+
+						</div>
+					{% endif %}
+
+					{% if kalium19.others %}
+						<div class="col-6 mb-4 col-md-3">
+
+							<div class="card">
+								<header class="card-header">
+									<h5 class="mi"><span class="material-icons">folder</span>Прочее</h5>
+								</header>
+								<div class="card-body">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
+								</div>
+								<hr>
+								<ul class="list">
+									{% for obj in kalium19.others %}
+										<li class="list-item">
+											<b class="mi"><span class="material-icons">article</span> {{ obj }}</b>
+											<a href="docs/util/{{ obj }}" aria-label="Утилита {{ obj }}"></a>
+										</li>
+									{% endfor %}
+								</ul>
 							</div>
 
 						</div>
