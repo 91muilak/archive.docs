@@ -16,7 +16,7 @@ pre[class*="language-"] {
 	word-wrap: normal;
 	line-height: 1.5;
 
-	@include tab-size(2);
+	@include tab-size();
 
 	@include prefixer(
 		hyphens,
