@@ -39,7 +39,8 @@ module.exports = function(cnf) {
 		watch: true,
 		notify: false,
 		ui: false,
-		open: true
+		open: true,
+		browser: ["chromium-browser"]
 
 	});
 
