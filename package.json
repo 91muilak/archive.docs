@@ -1,4 +1,5 @@
 {
+	"version": "0.0.1",
 	"scripts": {
 		"start": "run-p sass:watch 11ty:serve",
 		"build": "npm-run-all sass:compile 11ty:build",
