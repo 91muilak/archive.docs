@@ -34,8 +34,8 @@
 
 	"stats": {
 		"Бейдж: Версия документации": "img.shields.io/github/package-json/version/91muilak/docs/main?label=docs%20version",
+		"Бейдж: Последний коммит в ветку main": "img.shields.io/github/last-commit/91muilak/docs?label=last%20update",
 		"Бейдж: Версия Kalium19, которая используется в документации": "img.shields.io/github/package-json/dependency-version/91muilak/docs/dev/@rx1310/kalium19/main?label=kalium19%20version",
-		"Бейдж: Последний коммит в ветку main": "img.shields.io/github/last-commit/91muilak/docs",
 		"Бейдж: Количество открытых Issues": "img.shields.io/github/issues-raw/91muilak/docs",
 		"Бейдж: Количество закрытых Issues": "img.shields.io/github/issues-closed-raw/91muilak/docs?color=354a6d",
 		"Бейдж: Количество открытых Pull Requests": "img.shields.io/github/issues-pr-raw/91muilak/docs?label=open%20PR%27s",

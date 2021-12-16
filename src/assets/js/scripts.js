@@ -12,17 +12,3 @@ window.addEventListener('scroll', (e) => {
 	}
 
 });
-
-
-function toggleMenu() {
-
-	const menu = document.querySelector('.nav-menu');
-	let showClassName = "nav-menu--show";
-	
-	if (menu.classList.contains(showClassName)) {
-		menu.classList.remove(showClassName)
-	} else {
-		menu.classList.add(showClassName)
-	}
-
-}
