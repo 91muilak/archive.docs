@@ -6,6 +6,7 @@
 	align-items: center;
 	cursor: pointer;
 	display: flex;
+	color: var(--color-font);
 
 	@include opacity(0);
 	@include border-radius(100px);
