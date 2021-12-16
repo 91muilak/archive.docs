@@ -14,9 +14,33 @@
 	},
 
 	"social": {
-		"Telegram": "t.me/rx1310_dev",
-		"GitHub": "github.com/91muilak",
-		"ВКонтакте": "vk.com/rx1310_dev"
+		"Telegram": {
+			"url": "t.me/rx1310_dev",
+			"badge": "img.shields.io/badge/telegram-26A5E4?logo=telegram"
+		},
+		"GitHub": {
+			"url": "github.com/91muilak",
+			"badge": "img.shields.io/badge/github-212121?logo=github"
+		},
+		"ВКонтакте": {
+			"url": "vk.com/rx1310_dev",
+			"badge": "img.shields.io/badge/вконтакте-26A5E4?logo=vk"
+		},
+		"Discord": {
+			"url": "discord.gg/fvW9mHE6",
+			"badge": "img.shields.io/discord/917901779394514954?color=5865F2&label=discord&logo=discord&logoColor=fff"
+		}
+	},
+
+	"stats": {
+		"Бейдж: Версия документации": "img.shields.io/github/package-json/version/91muilak/docs/main?label=docs%20version",
+		"Бейдж: Версия Kalium19, которая используется в документации": "img.shields.io/github/package-json/dependency-version/91muilak/docs/dev/@rx1310/kalium19/main?label=kalium19%20version",
+		"Бейдж: Последний коммит в ветку main": "img.shields.io/github/last-commit/91muilak/docs",
+		"Бейдж: Количество открытых Issues": "img.shields.io/github/issues-raw/91muilak/docs",
+		"Бейдж: Количество закрытых Issues": "img.shields.io/github/issues-closed-raw/91muilak/docs?color=354a6d",
+		"Бейдж: Количество открытых Pull Requests": "img.shields.io/github/issues-pr-raw/91muilak/docs?label=open%20PR%27s",
+		"Бейдж: Количество закрытых Pull Requests": "img.shields.io/github/issues-pr-closed-raw/91muilak/docs?label=closed%20PR%27s",
+		"Бейдж: Количество посетителей репозитория документации на GitHub": "visitor-badge.laobi.icu/badge?page_id=91muilak.kalium19)"
 	}
 	
 }
