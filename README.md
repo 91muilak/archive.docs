@@ -11,6 +11,8 @@
 ![GitHub Forks](https://img.shields.io/github/forks/91muilak/docs?style=social)
 ![GitHub contributors](https://img.shields.io/github/contributors/91muilak/docs?style=social&logo=github)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e035f8f-ce11-4efc-a74e-bfcf220f597a/deploy-status)](https://app.netlify.com/sites/kalium19/deploys)
+
 ![Последний коммит](https://img.shields.io/github/last-commit/91muilak/docs)
 ![Количество коммитов в год](https://img.shields.io/github/commit-activity/y/91muilak/docs)
 ![Последний релиз](https://img.shields.io/github/v/release/91muilak/docs)
@@ -41,7 +43,7 @@ npm install
 - `@11ty/eleventy-plugin-syntaxhighlight` ![Версия @11ty/eleventy-plugin-syntaxhighlight](https://img.shields.io/github/package-json/dependency-version/91muilak/docs/dev/@11ty/eleventy-plugin-syntaxhighlight/main?label=%20) для подсветки синтаксиса кода в HTML;
 - [`@rx1310/kalium19`](https://www.npmjs.com/package/@rx1310/kalium19) ![Версия @rx1310/kalium19](https://img.shields.io/github/package-json/dependency-version/91muilak/docs/dev/@rx1310/kalium19/main?label=%20) для миксинов и других утилит SASS;
 
-**Другие команды:**
+**Команды npm:**
 - `npm run start` - вотчинг изменений в файлах и мгновенная компиляция (для локальной разработки);
 - `npm run build` - сборка проекта (для сервера/CI);
 
@@ -78,5 +80,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
-![Ключевые слова](https://img.shields.io/github/package-json/keywords/91muilak/docs?label=%20)

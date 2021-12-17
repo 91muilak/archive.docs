@@ -82,7 +82,7 @@ $k-mediaQueries: (
 		background-color: blue;
 	};
 
-	@include media(365px, max) {
+	@include media(635px, max) {
 		background-color: black;
 	}
 
@@ -100,7 +100,7 @@ $k-mediaQueries: (
   }
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 635px) {
   .block {
     background-color: black;
   }
