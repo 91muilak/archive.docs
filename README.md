@@ -1,5 +1,5 @@
-[![Новости](https://img.shields.io/badge/объявления-277a8c?logo=github)](https://github.com/91muilak/docs/discussions/3)
-[![Обсуждение](https://img.shields.io/badge/обсуждение-000000?logo=github)](https://github.com/91muilak/docs/discussions/4)
+[![Новости](https://img.shields.io/badge/объявления-277a8c?logo=github)](https://github.com/91muilak/kalium19/discussions/3)
+[![Обсуждение](https://img.shields.io/badge/обсуждение-000000?logo=github)](https://github.com/91muilak/kalium19/discussions/4)
 
 
 <img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Документация ![](https://img.shields.io/github/package-json/version/91muilak/docs?label=%20)
