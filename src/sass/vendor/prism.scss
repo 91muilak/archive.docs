@@ -1,0 +1,88 @@
+@import '../../../node_modules/@rx1310/kalium19/kalium19';
+@import '../themer/accent';
+@import '../variables';
+
+code[class*="language-"],
+pre[class*="language-"] {
+
+	.theme-dark & { color: #d4d4d4; }
+	.theme-light & { color: rgb(56, 58, 66); }
+
+	background: none;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	@include tab-size();
+
+	@include prefixer(
+		hyphens,
+		none,
+		webkit moz ms
+	);
+
+	@include prefixer-all(
+		user-select,
+		text
+	);
+
+	@include border-radius();
+
+}
+
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection,
+pre[class*="language-"] *::selection,
+code[class*="language-"] *::selection {
+	text-shadow: none;
+	background: var(--color-accent);
+}
+
+@media print {
+	pre[class*="language-"],
+	code[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+
+	.theme-dark & { background: #17181cec; }
+	.theme-light & { background: #ebebeb; }
+
+}
+
+code:not(pre code) {
+	
+	padding: .1em .3em;
+	border-radius: .3em;
+	color: #61d2e9;
+	background: #202e31;
+
+	.theme-light & {
+		color: #393A34;
+		background: #ebebeb;
+	}
+
+}
+
+:not(pre) > code[class*="language-"] {
+	padding: .1em .3em;
+	border-radius: .3em;
+	color: #db4c69;
+	background: #1e1e1e;
+}
+
+.theme-light {
+	@import 'prism/tokens-light';
+}
+
+.theme-dark {
+	@import 'prism/tokens-dark';
+}

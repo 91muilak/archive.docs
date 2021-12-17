@@ -475,3 +475,4 @@ zsdoc/data
 !/tests/_output/.gitkeep
 
 # End of https://www.toptal.com/developers/gitignore/api/sass,node,visualstudiocode,webstorm,linux,windows,macos,vim,git,jetbrains,zsh,batch
+package-lock.json

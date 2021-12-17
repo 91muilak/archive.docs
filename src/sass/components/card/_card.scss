@@ -1,0 +1,20 @@
+.card {
+
+	background-color: var(--card_color-background);
+	line-height: 20px;
+
+	@include box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
+	@include border-radius();
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 0;
+		padding: 0;
+	}
+
+	@import 'header';
+	@import 'body';
+	@import 'footer';
+
+}
+
+@import 'type/info';

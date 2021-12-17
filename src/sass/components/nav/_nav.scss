@@ -1,0 +1,36 @@
+.nav {
+
+	background: var(--nav_color-background);
+	padding: .5em 0;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 1;
+
+	.title {
+
+		margin: 0;
+    color: inherit !important;
+
+    @include opacity(0);
+    @include transition(opacity .5s);
+
+	}
+
+	@import 'container';
+	@import 'action';
+
+}
+
+.nav--shadow {
+
+  background: var(--nav_color-background--scrolled);
+
+  @include box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
+  
+  .title {
+    @include opacity(1);
+    @include transition(opacity .5s);
+  }
+
+}

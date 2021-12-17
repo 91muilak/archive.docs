@@ -1,0 +1,30 @@
+
+.theme-light .card-info {
+
+	--color-accent: #067eb9;
+	--card_color-background: #d1dce2;
+	--card-footer_color-background: #c0cfd8;
+
+	code:not(pre code) {
+
+		color: #002b53;
+		background: #168dc8;
+	
+	}
+
+}
+
+.theme-dark .card-info {
+
+	--color-accent: #0070da;
+	--card_color-background: #001930;
+	--card-footer_color-background: #001529;
+
+	code:not(pre code) {
+
+		color: #6fb0ec;
+		background: #003464;
+	
+	}
+
+}

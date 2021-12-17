@@ -1,0 +1,24 @@
+<nav class="nav">
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<div class="nav__container">
+					<div style="display: flex; align-items: center">
+						{% if nav.showBackAction != false %}
+							<button class="action material-icons" title="Назад" onclick="history.back()" style="margin-right: 14px">arrow_back</button>
+						{% endif %}
+						<h5 class="title">{{ title }}</h5>
+					</div>
+					<div style="display: flex; align-items: center">
+						{% if nav.showHomeAction %}
+							<a class="action material-icons" href="/">home</a>&nbsp;
+						{% endif %}
+						<button class="action material-icons" title="Сменить тему" onclick="themerToggle()">brightness_4</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="nav-menu-backdrop"></div>

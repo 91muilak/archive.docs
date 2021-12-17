@@ -1,0 +1,58 @@
+.list {
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&-item {
+
+		padding: 1em 1.2em;
+    cursor: pointer;
+		position: relative;
+
+		@include transition(
+			background .3s,
+			color .3s
+		);
+
+		&:hover,
+		&:focus,
+		a:focus-visible::before  {
+			background: var(--list-item_color-background--hover);
+		}
+
+		&:active {
+			color: var(--color-accent);
+			background: var(--list-item_color-background--active);
+		}
+
+		a::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.rounded-bottom &:last-child {
+			@include border-radius-ext(
+				0, 
+				0, 
+				$k-borderRadiusDefault, 
+				$k-borderRadiusDefault
+			);
+		}
+
+		.rounded-top &:first-child {
+			@include border-radius-ext(
+				$k-borderRadiusDefault, 
+				$k-borderRadiusDefault,
+				0,
+				0
+			);
+		}
+
+  }
+
+}

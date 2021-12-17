@@ -1,0 +1,46 @@
+.scroll2top {
+
+	padding: 10px;
+	background: transparent;
+	border: 1px solid var(--color-divider);
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	color: var(--color-font);
+
+	@include opacity(0);
+	@include border-radius(100px);
+
+	&:hover {
+
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+
+    @include opacity(1);
+
+	}
+
+	&:active {
+		background-color: var(--color-accent);
+		color: var(--color-background)
+	}
+
+	@include transition(
+		border-color .3s,
+		background-color .3s,
+		color .3s,
+		opacity .3s
+	);
+
+	&--show {
+    @include opacity(.5);
+	}
+
+}
+
+.scroll2top-container {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	padding: 2em 0 1em;
+}

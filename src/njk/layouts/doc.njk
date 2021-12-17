@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		{% include "head.njk" %}
+		<link rel="stylesheet" href="/assets/css/vendor/prism.css">
+	</head>
+	<body>
+		
+		{% include "nav.njk" %}
+		{% include "header.njk" %}
+
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						{{ content | safe }}
+					</div>
+				</div>
+			</div>
+		</main>
+
+		{% include "footer.njk" %}
+
+	</body>
+</html>

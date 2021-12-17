@@ -1,0 +1,47 @@
+<script>
+	function scroll2top() {
+		window.scroll({
+			top: 0, 
+			left: 0, 
+			behavior: 'smooth' 
+		});
+	}
+</script>
+
+<center class="scroll2top-container">
+	<button class="scroll2top" onclick="scroll2top()" title="К началу страницы" aria-label="Переход к началу страницы">
+		<span class="material-icons">vertical_align_top</span>
+	</button>
+</center>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 mb-4">
+				<center>
+					<h6>статистика репозитория</h6>
+					{% for title, url in stats %}
+						<img 
+							src="https://{{ url }}" 
+							alt="{{ title }}" 
+							title="{{ title }}" 
+							aria-label="{{ title }}">
+					{% endfor %}
+				</center>
+				<center>
+					<h6>контакты</h6>
+					{% for title, obj in social %}
+						<a 
+							href="https://{{ obj.url }}"
+							title="{{ title }}" 
+							aria-label="{{ title }}">
+								<img 
+									src="https://{{ obj.badge }}" 
+									alt="{{ title }}">
+						</a>
+					{% endfor %}
+				</center>
+			</div>
+		</div>
+	</div>
+</footer>

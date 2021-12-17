@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		{% include "head.njk" %}
+		<link rel="stylesheet" href="/assets/css/vendor/prism.css">
+	</head>
+	<body>
+		
+		{% include "nav.njk" %}
+		{% include "header.njk" %}
+
+		<br>
+
+		<main>
+			<div class="container">
+				<div class="row">
+
+					<div class="col-6 mb-4">
+						<div class="card card-info">
+							<header class="card-header">
+								<h5 class="mi"><span class="material-icons">info</span>Внимание!</h5>
+							</header>
+							<div class="card-body">
+								<p>Сайт находится в данный момент в разработке и многие разделы вовсе не заполнены 🤷. Я работаю над завершением документации.</p>
+							</div>
+							<footer class="card-footer">
+								<p>В этом можно убедиться взглянув на ветку  в <a href="https://github.com/91muilak/docs/tree/develop" title="Открыть репозиторий проекта на GitHub" aria-label="Ссылка на репозиторий проекта"><code>develop</code></a> репозитория документации на GitHub.</p>
+							</footer>
+						</div>
+					</div>
+
+					{% if kalium19.mixins %}
+						<div class="col-6 mb-4 col-md-6 col-xl-3">
+
+							<div class="card">
+								<header class="card-header">
+									<h5 class="mi"><span class="material-icons">folder</span>Миксины</h5>
+								</header>
+								<div class="card-body">
+									<p>Миксины позволяют генерировать шаблонный код любой величины, избавляя разработчика от самостоятельного прописывания этого кода.</p>
+								</div>
+								<hr>
+								<ul class="list">
+									{% for obj in kalium19.mixins %}
+										<li class="list-item">
+											<b class="mi"><span class="material-icons">article</span> {{ obj }}</b>
+											<a href="docs/mixin/{{ obj }}" aria-label="Миксин {{ obj }}"></a>
+										</li>
+									{% endfor %}
+								</ul>
+								<footer class="card-footer">
+									<p class="mi"><span class="material-icons">web</span><a href="docs/template">template.md</a></p>
+								</footer>
+							</div>
+							
+						</div>
+					{% endif %}
+
+					<div class="col-6 col-xl-3">
+						<div class="row flex-xl-column flex-md-row">
+
+							{% if kalium19.utils %}
+								<div class="col-6 mb-4 col-md-3 col-xl-6">
+
+									<div class="card">
+										<header class="card-header">
+											<h5 class="mi"><span class="material-icons">folder</span>Утилиты</h5>
+										</header>
+										<div class="card-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
+										</div>
+										<hr>
+										<ul class="list">
+											{% for obj in kalium19.utils %}
+												<li class="list-item">
+													<b class="mi"><span class="material-icons">article</span> {{ obj }}</b>
+													<a href="docs/util/{{ obj }}" aria-label="Утилита {{ obj }}"></a>
+												</li>
+											{% endfor %}
+										</ul>
+										<footer class="card-footer">
+											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+										</footer>
+									</div>
+
+								</div>
+							{% endif %}
+
+							{% if kalium19.others %}
+								<div class="col-6 mb-4 col-md-3 col-xl-6">
+
+									<div class="card">
+										<header class="card-header">
+											<h5 class="mi"><span class="material-icons">folder</span>Прочее</h5>
+										</header>
+										<div class="card-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, veritatis officia repudiandae numquam ab sint optio fugit delectus consectetur quod quam qui modi laudantium, assumenda corrupti dolorum, veniam dicta autem!</p>
+										</div>
+										<hr>
+										<ul class="list">
+											{% for obj in kalium19.others %}
+												<li class="list-item">
+													<b class="mi"><span class="material-icons">article</span> {{ obj }}</b>
+													<a href="docs/util/{{ obj }}" aria-label="Утилита {{ obj }}"></a>
+												</li>
+											{% endfor %}
+										</ul>
+									</div>
+
+								</div>
+							{% endif %}
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+		{% include "footer.njk" %}
+
+	</body>
+</html>

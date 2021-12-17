@@ -1,0 +1,28 @@
+{
+
+	"mixins": [
+		"media",
+		"keyframes",
+		"placeholder",
+		"important",
+		"prefixer",
+		"prefixer/border-radius",
+		"prefixer/box-shadow",
+		"prefixer/box-sizing",
+		"prefixer/opacity",
+		"prefixer/tab-size",
+		"prefixer/transition"
+	],
+
+	"utils": [
+		"background-colors",
+		"font-colors",
+		"opacity"
+	],
+
+	"others": [
+		"material-colors",
+		"spacers"
+	]
+
+}

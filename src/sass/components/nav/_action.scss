@@ -1,0 +1,56 @@
+.action {
+
+	$size: 38px;
+
+	width: $size;
+	height: $size;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	color: var(--color-font);
+	text-decoration: none;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+
+	&_accent {
+		color: var(--color-accent);
+	}
+
+	@include border-radius(50%);
+	@include transition(
+		color .3s,
+		background .3s
+	);
+
+	&:hover,
+	&:focus {
+		background: var(--nav-action_color-background--hover);
+	}
+
+	&::before:hover {
+		display: block;
+		width: $size;
+		height: $size;
+		content: '';
+		position: absolute;
+		top: 0;
+	}
+
+	&:active {
+		background: var(--nav-action_color-background--active);
+		color: var(--color-accent);
+	}
+
+	&:first-child {
+		margin-left: -10px;
+	}
+
+	&:last-child {
+		margin-right: -7px;
+	}
+
+}

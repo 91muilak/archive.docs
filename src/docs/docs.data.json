@@ -1,0 +1,7 @@
+{
+	"layout": "doc.njk",
+	"date": "Last Modified",
+	"nav": {
+		"showHomeAction": false
+	}
+}

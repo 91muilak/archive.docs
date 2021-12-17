@@ -1,0 +1,50 @@
+table {
+
+  color: inherit;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid transparent;
+
+  @media (max-width: 575.98px) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+	
+	&::-webkit-scrollbar-thumb {
+	
+		background-color: var(--color-font);
+		@include border-radius();
+	
+	}
+	
+	@include border-radius();
+
+  th,
+  td {
+    padding: 0.75em;
+    vertical-align: top;
+    border-top: 1px solid var(--color-divider);
+  }
+
+  th { text-align: inherit; }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid var(--color-divider);
+    border-top: none;
+  }
+
+	thead th,
+	tbody td {
+		padding: .6em 0;
+	}
+
+	tbody tr:hover,
+	tbody tr:active,
+	tbody tr:focus {
+		background: var(--table_color-background--hover);
+	}
+
+}

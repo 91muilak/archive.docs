@@ -1,0 +1,65 @@
+@import 'accent';
+
+$themes: (
+
+	light: (
+
+		color-theme: #FFFFFF,
+		color-accent: $color_accent-day,
+		color-font: black,
+		color-background: #FFFFFF,
+		color-divider: #00000018,
+
+		// * nav
+		nav_color-background: #FBFBFB,
+		nav_color-background--scrolled: #ffffff,
+		nav-action_color-background--hover: fade-out($color_accent-day, .9),
+		nav-action_color-background--active: fade-out($color_accent-day, .85),
+
+    // * header
+    header_color-background: #FBFBFB,
+
+		// * card
+		card_color-background: #FBFBFB,
+		card-footer_color-background: #f1f1f1,
+
+		// * list
+		list-item_color-background--hover: fade-out($color_accent-day, .9),
+		list-item_color-background--active: fade-out($color_accent-day, .85),
+
+		// * table
+		table_color-background--hover: #f0f0f0
+
+	),
+
+	dark: (
+
+		color-theme: #050505,
+		color-accent: $color_accent-night,
+		color-font: #F7F9F8,
+		color-background: #050505,
+		color-divider: #72727218,
+
+		// * nav
+		nav_color-background: #17181c,
+		nav_color-background--scrolled: #17181c,
+		nav-action_color-background--hover: fade-out($color_accent-night, .9),
+		nav-action_color-background--active: fade-out($color_accent-night, .85),
+
+    // * header
+    header_color-background: #17181C,
+
+		// * card
+		card_color-background: #17181C,
+		card-footer_color-background: #222329,
+
+		// * list
+		list-item_color-background--hover: fade-out($color_accent-night, .9),
+		list-item_color-background--active: fade-out($color_accent-night, .85),
+
+		// * table
+		table_color-background--hover: #17181C
+
+	)
+
+);
