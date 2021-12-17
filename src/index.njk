@@ -2,6 +2,7 @@
 <html lang="ru">
 	<head>
 		{% include "head.njk" %}
+		<link rel="stylesheet" href="/assets/css/vendor/prism.css">
 	</head>
 	<body>
 		
@@ -13,6 +14,20 @@
 		<main>
 			<div class="container">
 				<div class="row">
+
+					<div class="col-6 mb-4">
+						<div class="card card-info">
+							<header class="card-header">
+								<h5 class="mi"><span class="material-icons">info</span>Внимание!</h5>
+							</header>
+							<div class="card-body">
+								<p>Сайт находится в данный момент в разработке и многие разделы вовсе не заполнены 🤷. Я работаю над завершением документации.</p>
+							</div>
+							<footer class="card-footer">
+								<p>В этом можно убедиться взглянув на ветку  в <a href="https://github.com/91muilak/docs/tree/develop" title="Открыть репозиторий проекта на GitHub" aria-label="Ссылка на репозиторий проекта"><code>develop</code></a> репозитория документации на GitHub.</p>
+							</footer>
+						</div>
+					</div>
 
 					{% if kalium19.mixins %}
 						<div class="col-6 mb-4 col-md-6 col-xl-3">
