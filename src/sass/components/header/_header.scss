@@ -4,12 +4,39 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.144);
 	z-index: 999;
 
-	&__title {
+	&-title {
 		font-size: $reset_font-size--h4;
 	}
 
-	&__description {
+	&-description {
 		@include opacity(.9);
+	}
+
+	&-action {
+
+		text-transform: lowercase;
+		padding: .4em 1em;
+		margin-bottom: 1.2em;
+		display: inline-block;
+		font-size: $reset_font-size--sm;
+		border: 1px solid var(--color-divider);
+
+		@include border-radius(50px);
+		@include transition(
+			color .3s,
+			background .3s
+		);
+
+		&:hover {
+			background: var(--nav-action_color-background--hover);
+		}
+
+		&:active,
+		&:focus {
+			background: var(--nav-action_color-background--active);
+			border-color: var(--nav-action_color-background--active);
+		}
+
 	}
 
 }

@@ -1,12 +1,21 @@
 <header class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <div class="header__container">
-          <h1 class="header__title">{{ header.title }}</h1>
-          <p class="header__description">{{ header.description }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<div class="header-container">
+					<h1 class="header-title">{{ header.title }}</h1>
+					<p class="header-description">{{ header.description }}</p>
+					{% if header.editLink %}
+						<a 
+							class="header-action undecor" 
+							href="https://github.com/91muilak/docs/edit/develop/{{ header.editLink }}"
+							title="Предложить исправление, если Вы нашли ошибку"
+							aria-label="Предложить исправление">
+								Предложить исправление
+						</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
 </header>

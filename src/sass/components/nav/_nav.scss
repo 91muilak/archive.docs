@@ -12,9 +12,11 @@
 		margin: 0;
     color: inherit !important;
 
-    @include opacity(0);
-    @include transition(opacity .5s);
+	}
 
+	.clps {
+		@include opacity(0);
+    @include transition(opacity .5s);
 	}
 
 	@import 'container';
@@ -28,7 +30,7 @@
 
   @include box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
   
-  .title {
+  .clps {
     @include opacity(1);
     @include transition(opacity .5s);
   }
