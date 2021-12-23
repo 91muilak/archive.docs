@@ -2,8 +2,7 @@
 title: "Template"
 header: {
 	"title": "Template",
-	"description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error laudantium nostrum quibusdam velit laboriosam delectus excepturi dolorem nisi dolor recusandae, cupiditate enim hic ut cum aperiam. Alias aspernatur odit totam?",
-  "editLink": "src/docs/template.md"
+	"description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error laudantium nostrum quibusdam velit laboriosam delectus excepturi dolorem nisi dolor recusandae, cupiditate enim hic ut cum aperiam. Alias aspernatur odit totam?"
 }
 ---
 
