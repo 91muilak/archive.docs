@@ -1,5 +1,5 @@
 {
-	"version": "19.12.21",
+	"version": "23.12.21",
 	"scripts": {
 		"start": "run-p sass:watch 11ty:serve",
 		"build": "npm-run-all sass:compile 11ty:build",
