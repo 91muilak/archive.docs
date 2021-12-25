@@ -15,8 +15,6 @@
 
 ![Последний коммит](https://img.shields.io/github/last-commit/91muilak/docs)
 ![Количество коммитов в год](https://img.shields.io/github/commit-activity/y/91muilak/docs)
-![Последний релиз](https://img.shields.io/github/v/release/91muilak/docs)
-![Дата последнего релиза](https://img.shields.io/github/release-date/91muilak/docs)
 ![Количество ЯП](https://img.shields.io/github/languages/count/91muilak/docs?color=fff)
 ![Топ ЯП](https://img.shields.io/github/languages/top/91muilak/docs?color=C76494)
 ![Размер репозитория](https://img.shields.io/github/repo-size/91muilak/docs?color=ffb600)
