@@ -3,7 +3,6 @@ name: commit-to-tg
 on:
   push:
     branches:
-      - main
       - develop
 
 jobs:
