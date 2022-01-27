@@ -1,4 +1,6 @@
 @use "sass:map";
+@use '../../node_modules/@rx1310/kalium19' as k19;
+
 
 @-ms-viewport { width: device-width; }
 @-o-viewport	{ width: device-width; }
@@ -13,7 +15,7 @@
 }
 
 // * {
-// 	@include transition(
+// 	@include k19.transition(
 // 		background .5s, 
 // 		box-shadow .4s,
 // 		color .07s
@@ -67,8 +69,8 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-font-smoothing: antialiased;
 
-	@include prefixer(text-size-adjust, 100%, all); // https://clck.ru/NNamf
-	@include prefixer(user-select, none, all);
+	@include k19.prefixer(text-size-adjust, 100%, all); // https://clck.ru/NNamf
+	@include k19.prefixer(user-select, none, all);
 
 }
 
@@ -143,7 +145,7 @@ img {
 	vertical-align: middle;
 	object-fit: scale-down;
 
-	@include border-radius(8px);
+	@include k19.border-radius(8px);
 
 }
 
@@ -179,7 +181,7 @@ button:disabled {
 }
 
 legend {
-	@include box-sizing();
+	@include k19.box-sizing();
 	color: inherit;
 	display: table;
 	max-width: 100%;
@@ -189,7 +191,7 @@ legend {
 
 [type="checkbox"],
 [type="radio"] {
-	@include box-sizing();
+	@include k19.box-sizing();
 	padding: 0;
 }
 
@@ -219,7 +221,7 @@ legend {
 	pointer-events: none;
 	cursor: not-allowed;
 
-	@include opacity(0.50);
+	@include k19.opacity(0.50);
 
 }
 

@@ -20,8 +20,8 @@
 		color: var(--color-accent);
 	}
 
-	@include border-radius(50%);
-	@include transition(
+	@include k19.border-radius(50%);
+	@include k19.transition(
 		color .3s,
 		background .3s,
 		opacity .3s

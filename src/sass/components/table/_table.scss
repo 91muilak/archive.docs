@@ -15,11 +15,11 @@ table {
 	&::-webkit-scrollbar-thumb {
 	
 		background-color: var(--color-font);
-		@include border-radius();
+		@include k19.border-radius();
 	
 	}
 	
-	@include border-radius();
+	@include k19.border-radius();
 
   th,
   td {

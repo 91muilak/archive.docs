@@ -9,7 +9,7 @@
 	}
 
 	&-description {
-		@include opacity(.9);
+		@include k19.opacity(.9);
 	}
 
 	&-action {
@@ -21,8 +21,8 @@
 		font-size: $reset_font-size--sm;
 		border: 1px solid var(--color-divider);
 
-		@include border-radius(50px);
-		@include transition(
+		@include k19.border-radius(50px);
+		@include k19.transition(
 			color .3s,
 			background .3s
 		);

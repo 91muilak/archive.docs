@@ -15,8 +15,8 @@
 	}
 
 	.clps {
-		@include opacity(0);
-    @include transition(opacity .5s);
+		@include k19.opacity(0);
+    @include k19.transition(opacity .5s);
 	}
 
 	@import 'container';
@@ -28,11 +28,11 @@
 
   background: var(--nav_color-background--scrolled);
 
-  @include box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
+  @include k19.box-shadow(rgba(0, 0, 0, 0.16) 0px 1px 4px);
   
   .clps {
-    @include opacity(1);
-    @include transition(opacity .5s);
+    @include k19.opacity(1);
+    @include k19.transition(opacity .5s);
   }
 
 }

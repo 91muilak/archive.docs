@@ -10,7 +10,7 @@
     cursor: pointer;
 		position: relative;
 
-		@include transition(
+		@include k19.transition(
 			background .3s,
 			color .3s
 		);
@@ -36,18 +36,18 @@
 		}
 
 		.rounded-bottom &:last-child {
-			@include border-radius-ext(
+			@include k19.border-radius-ext(
 				0, 
 				0, 
-				$k-borderRadiusDefault, 
-				$k-borderRadiusDefault
+				k19.$border-radius, 
+				k19.$border-radius
 			);
 		}
 
 		.rounded-top &:first-child {
-			@include border-radius-ext(
-				$k-borderRadiusDefault, 
-				$k-borderRadiusDefault,
+			@include k19.border-radius-ext(
+				k19.$border-radius, 
+				k19.$border-radius,
 				0,
 				0
 			);

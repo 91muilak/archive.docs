@@ -1,4 +1,4 @@
-@import '../../../node_modules/@rx1310/kalium19/kalium19';
+@use '../../../node_modules/@rx1310/kalium19' as k19;
 @import '../themer/accent';
 @import '../variables';
 
@@ -16,20 +16,20 @@ pre[class*="language-"] {
 	word-wrap: normal;
 	line-height: 1.5;
 
-	@include tab-size();
+	@include k19.tab-size(2);
 
-	@include prefixer(
+	@include k19.prefixer(
 		hyphens,
 		none,
 		webkit moz ms
 	);
 
-	@include prefixer-all(
+	@include k19.prefixer-legacy(
 		user-select,
 		text
 	);
 
-	@include border-radius();
+	@include k19.border-radius();
 
 }
 

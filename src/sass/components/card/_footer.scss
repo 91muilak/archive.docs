@@ -4,6 +4,6 @@
 	border-top: 1px solid var(--color-divider);
 	padding: 1em 1.2em 1em;
 
-	@include border-radius-ext(0, 0, $k-borderRadiusDefault, $k-borderRadiusDefault);
+	// @include k19.border-radius-ext(0, 0, $k-borderRadiusDefault, $k-borderRadiusDefault);
 
 }

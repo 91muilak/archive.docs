@@ -2,8 +2,9 @@
 
 @use "sass:map";
 
+@use '../../node_modules/@rx1310/kalium19' as k19;
+
 @import 'variables';
-@import '../../node_modules/@rx1310/kalium19/kalium19';
 @import 'themer/themer';
 @import 'reset';
 @import '../../node_modules/@rx1310/grid-v4/grid-v4';
